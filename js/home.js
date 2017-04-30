@@ -140,7 +140,7 @@ require([
         );
 
 
-        var places = new FeatureLayer("http://localhost:6080/arcgis/rest/services/SampleWorldCities/MapServer/0", {
+        var places = new FeatureLayer("https://raster.nationalmap.gov/arcgis/rest/services/SampleWorldCities/MapServer/0", {
             mode: FeatureLayer.MODE_SNAPSHOT,
             infoTemplate: infoTemplate,
             outFields: [
@@ -155,7 +155,7 @@ require([
 
         map.addLayer(places);
 
-        var MapServer = "http://localhost:6080/arcgis/rest/services/SampleWorldCities/MapServer/";
+        var MapServer = "https://raster.nationalmap.gov/arcgis/rest/services/SampleWorldCities/MapServer";
         //查询
         //创建属性查询对象
         var findTask = new FindTask(MapServer);
@@ -174,7 +174,9 @@ require([
             findParams.searchText = "0";
             //执行查询对象
             findTask.execute(findParams, ShowFindResult);
-        })
+         
+
+        });
 
         function ShowFindResult(queryResult) {
             //创建线符号
@@ -231,7 +233,7 @@ require([
             toolBar.deactivate();
             map.graphics.clear();
             //创建查询对象，注意：服务的后面有一个编号，代表对那一个图层进行查询
-            var queryTask = new QueryTask("http://localhost:6080/arcgis/rest/services/SampleWorldCities/MapServer/0");
+            var queryTask = new QueryTask("https://raster.nationalmap.gov/arcgis/rest/services/SampleWorldCities/MapServer/0");
             //创建查询参数对象
             var query = new Query();
 
