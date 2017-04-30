@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>实验二</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
+    <script src="js/init.js"></script>
+</head>
+
+<body class="claro">
+    <header>
+        <div class="header-left">WebGIS实验二</div>
+        <div id="basemapGallery" style="width:80px; height:40px; overflow:auto;"></div>
+    </header>
+    <main>
+        <div class="content-left">
+            <p class="menu_head">绘图</p>
+            <div class="menu_body" id="info">
+                <a href="#" id="Point">点</a>
+                <a href="#" id="Polyline">线</a>
+                <a href="#" id="Polygon">面</a>
+                <a href="#" id="Extent">长方形</a>
+                <a href="#" id="Triangle">三角形</a>
+                <a href="#" id="Circle">圆</a>
+            </div>
+            <p class="menu_head">空间分析</p>
+            <div style="display:none" class="menu_body">
+                <a href="#">缓冲区</a>
+            </div>
+            <p class="menu_head">查询分析</p>
+            <div style="display:none" class="menu_body">
+                <a href="#" id="query">属性查询</a>
+                <a href="#" id="queryTask">拉框查询</a>
+            </div>
+        </div>
+        <div class="content-right">
+            <div id="map" class="MapClass">
+            </div>
+        </div>
+        <div id="coord"></div>
+        <div id="dir" class="dirclass">
+        </div>
+    </main>
+    <footer>
+        <p>CopyRight&copy2017<a id="backTop" href="#">   回到顶部</a></p>
+    </footer>
+    <div id="divShowResult"></div>
+    <div id="divShowResult2"></div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/home.js"></script>
+
+</html>
